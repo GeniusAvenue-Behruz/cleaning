@@ -28,7 +28,17 @@ const Header = () => {
                         affordable price. Pickup and drop-off options available!
                     </p>
                     <button className="cta-button">How it works</button>
-                    <img src="data.svg" alt="data" />
+                    
+                    <div className='hero-datas'>
+                        <div className='hero-data customers'>
+                            <span className='numbers'>18m+</span>
+                            <span className='text'>Happy<br/>Customers</span>
+                        </div>
+                        <div className='hero-data experience'>
+                            <span className='numbers'>10+</span>
+                            <span className='text'>Years of<br/>Experience</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="relative">
