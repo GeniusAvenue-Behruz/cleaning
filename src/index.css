@@ -35,7 +35,8 @@ ul {
   font-size: 35px;
 }
 header {
-  /* overflow: hidden; */
+  /* overflow-x: hidden; */
+  
   nav {
     display: flex;
     align-items: center;
@@ -136,9 +137,11 @@ header {
       display: flex;
       align-items: center;
       justify-content: end;
+      visibility: visible;
 
       .hero-image {
         position: absolute;
+        
         /* top: 0; */
         left: 0;
       }
@@ -355,14 +358,19 @@ header {
       font-family: inter;
       font-weight: bold;
       color: var(--clr-textGrey);
-      margin-bottom: 26px;
+      padding-bottom: 26px;
     }
     td{
       font-size: 16px;
       font-family: inter;
       color: var(--clr-textGrey);
-      margin-bottom: 16px;
+      padding-bottom: 15px;
     }
   }
   }
+}
+.social-media{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

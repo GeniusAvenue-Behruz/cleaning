@@ -18,7 +18,7 @@ const Footer = () => {
                         <td>About Us</td>
                         <td>Our team</td>
                         <td>Pickup</td>
-                        <td>
+                        <td className='social-media'>
                             <i class="fa-brands fa-square-instagram"></i>
                             <i class="fa-brands fa-telegram"></i>
                             <i class="fa-brands fa-facebook"></i>
