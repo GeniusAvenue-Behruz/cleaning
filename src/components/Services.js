@@ -1,6 +1,10 @@
-import React from 'react'
-
+import React, {useState} from 'react'
 const Services = () => {
+    const [activeCard, setActiveCard] = useState(1);
+
+    const handleClick = (index) =>{
+        setActiveCard(index);
+    }
     return (
         <section className="services-section">
             <div className='steps__header' style={{ marginTop: '-130px' }}>
@@ -9,7 +13,7 @@ const Services = () => {
 
             </div>
             <div className="packages-grid">
-                <div className="package-card">
+                <div className={`package-card ${activeCard === 0 ? 'highlight' : ''}`} onClick={()=>handleClick(0)}>
                     <div className='package-card__header'>
                         <img src='imgs/singleSize.svg' alt='Single Size' />
                         <div className='package-card__header-title'>
@@ -23,11 +27,11 @@ const Services = () => {
                         <li>up to 10 lbs per load</li>
                     </ul>
                     <p className="package-price">10 dollars /per month</p>
-                    <button className="choose-btn">Choose</button>
+                    <button className="choose-btn" onClick={()=> window.location.href = 'tel:+998943669473'}>Contact</button>
                 </div>
 
-                <div className="package-card highlight">
-                <div className='package-card__header'>
+                <div className={`package-card ${activeCard === 1 ? 'highlight' : ''}`} onClick={()=>handleClick(1)}>
+                    <div className='package-card__header'>
                         <img src='imgs/coupleSize.svg' alt='Single Size' />
                         <div className='package-card__header-title'>
                             <h3 className="package-title">COUPLES SIZE</h3>
@@ -42,11 +46,11 @@ const Services = () => {
                         <li>Pickup & drop off</li>
                     </ul>
                     <p className="package-price">20 dollars /per month</p>
-                    <button className="choose-btn">Choose</button>
+                    <button className="choose-btn" onClick={()=> window.location.href = 'tel:+998943669473'}>Contact</button>
                 </div>
 
-                <div className="package-card">
-                <div className='package-card__header'>
+                <div className={`package-card ${activeCard === 2 ? 'highlight' : ''}`} onClick={()=>handleClick(2)}>
+                    <div className='package-card__header'>
                         <img src='imgs/familySize.svg' alt='Single Size' />
                         <div className='package-card__header-title'>
                             <h3 className="package-title">Family SIZE</h3>
@@ -62,7 +66,7 @@ const Services = () => {
                         <li>Free detergent samples</li>
                     </ul>
                     <p className="package-price">30 dollars /per month</p>
-                    <button className="choose-btn">Choose</button>
+                    <button className="choose-btn">Contact</button><button className="choose-btn" onClick={()=> window.location.href = 'tel:+998943669473'}>Contact</button>
                 </div>
             </div>
         </section>
