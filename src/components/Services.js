@@ -1,77 +1,59 @@
 import React, {useState} from 'react'
+import PackageCard from './PackageCard.js'
 const Services = () => {
     const [activeCard, setActiveCard] = useState(1);
 
-    const handleClick = (index) =>{
+    const handleClick = (index) => {
         setActiveCard(index);
-    }
+    };
+
+    // Package data
+    const packages = [
+        {
+            title: 'SINGLE SIZE',
+            description: 'Perfect for people who live alone',
+            features: ['2 loads per week', 'up to 10 lbs per load'],
+            price: '10 dollars',
+            imgSrc: 'imgs/singleSize.svg',
+        },
+        {
+            title: 'COUPLES SIZE',
+            description: 'Perfect for couples or roommates',
+            features: ['4 loads per week', 'up to 12 lbs per load', 'Special garments', 'Pickup & drop off'],
+            price: '20 dollars',
+            imgSrc: 'imgs/coupleSize.svg',
+        },
+        {
+            title: 'FAMILY SIZE',
+            description: 'Perfect for families',
+            features: ['6 loads per week', 'up to 15 lbs per load', 'Special garments', 'Pickup & drop off', 'Free detergent samples'],
+            price: '30 dollars',
+            imgSrc: 'imgs/familySize.svg',
+        },
+    ];
+
     return (
         <section className="services-section">
             <div className='steps__header' style={{ marginTop: '-130px' }}>
                 <h3 style={{ color: '#21B7E2', textTransform: 'uppercase', fontFamily: 'Grandstander', fontWeight: '400', fontSize: '24px' }}>Services</h3>
                 <h1 style={{ color: '#263238', fontSize: '60px', fontFamily: 'Outfit', fontWeight: '500' }}>Services & Packages</h1>
-
             </div>
             <div className="packages-grid">
-                <div className={`package-card ${activeCard === 0 ? 'highlight' : ''}`} onClick={()=>handleClick(0)}>
-                    <div className='package-card__header'>
-                        <img src='imgs/singleSize.svg' alt='Single Size' />
-                        <div className='package-card__header-title'>
-                            <h3 className="package-title">SINGLE SIZE</h3>
-                            <p className="package-description">Perfect for people who live alone</p>
-                        </div>
-                    </div>
-                    <p className='included'>What's included</p>
-                    <ul className="package-features">
-                        <li>2 loads per week</li>
-                        <li>up to 10 lbs per load</li>
-                    </ul>
-                    <p className="package-price">10 dollars /per month</p>
-                    <button className="choose-btn" onClick={()=> window.location.href = 'tel:+998943669473'}>Contact</button>
-                </div>
-
-                <div className={`package-card ${activeCard === 1 ? 'highlight' : ''}`} onClick={()=>handleClick(1)}>
-                    <div className='package-card__header'>
-                        <img src='imgs/coupleSize.svg' alt='Single Size' />
-                        <div className='package-card__header-title'>
-                            <h3 className="package-title">COUPLES SIZE</h3>
-                            <p className="package-description">Perfect for people who live alone</p>
-                        </div>
-                    </div>
-                    <p className='included'>What's included</p>
-                    <ul className="package-features">
-                        <li>4 loads per week</li>
-                        <li>up to 12 lbs per load</li>
-                        <li>Special garments</li>
-                        <li>Pickup & drop off</li>
-                    </ul>
-                    <p className="package-price">20 dollars /per month</p>
-                    <button className="choose-btn" onClick={()=> window.location.href = 'tel:+998943669473'}>Contact</button>
-                </div>
-
-                <div className={`package-card ${activeCard === 2 ? 'highlight' : ''}`} onClick={()=>handleClick(2)}>
-                    <div className='package-card__header'>
-                        <img src='imgs/familySize.svg' alt='Single Size' />
-                        <div className='package-card__header-title'>
-                            <h3 className="package-title">Family SIZE</h3>
-                            <p className="package-description">Perfect for people who live alone</p>
-                        </div>
-                    </div>
-                    <p className='included'>What's included</p>
-                    <ul className="package-features">
-                        <li>6 loads per week</li>
-                        <li>up to 15 lbs per load</li>
-                        <li>Special garments</li>
-                        <li>Pickup & drop off</li>
-                        <li>Free detergent samples</li>
-                    </ul>
-                    <p className="package-price">30 dollars /per month</p>
-                    <button className="choose-btn">Contact</button><button className="choose-btn" onClick={()=> window.location.href = 'tel:+998943669473'}>Contact</button>
-                </div>
+                {packages.map((pkg, index) => (
+                    <PackageCard
+                        key={index}
+                        isActive={activeCard === index}
+                        onClick={() => handleClick(index)}
+                        imgSrc={pkg.imgSrc}
+                        title={pkg.title}
+                        description={pkg.description}
+                        features={pkg.features}
+                        price={pkg.price}
+                    />
+                ))}
             </div>
         </section>
     );
-
-}
+};
 
 export default Services

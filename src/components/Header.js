@@ -1,20 +1,9 @@
 import React from 'react';
-
+import Nav from './Nav.js'
 const Header = () => {
     return (
         <header className="container">
-            <nav className="nav">
-                <a className="logo" href="#!">
-                    <img src="logo.svg" alt="logo" /> NEO Cleaning
-                </a>
-                <ul className="nav-links">
-                    <li><a href="#!">Home</a></li>
-                    <li><a href="#!">How it Works</a></li>
-                    <li><a href="#!">Services</a></li>
-                    <li><a href="#!">Locations</a></li>
-                    <li><a href="#!">Contact Us</a></li>
-                </ul>
-            </nav>
+            <Nav/>
             <div className="hero">
                 <div className="hero-text">
                     <span className="discount-banner">

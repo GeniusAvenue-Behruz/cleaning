@@ -10,6 +10,83 @@
   --clr-textGrey: #263238;
 }
 
+/* NO PAGE FOUND */
+/* Styling the container */
+.no-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  background: linear-gradient(135deg, var(--clr-text), white);
+  color: var(--clr-textGrey);
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  padding: 20px;
+}
+
+/* Big 404 title */
+.no-page-title {
+  font-size: 8rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  animation: pulse 1.5s infinite;
+}
+
+/* Error message */
+.no-page-message {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+/* Styled UL list for reasons and actions */
+.no-page-reasons, .no-page-actions {
+  text-align: left;
+  list-style-type: square;
+  margin: 10px 0;
+  padding-left: 1.5rem;
+  font-size: 1.2rem;
+}
+
+/* List item styling */
+.no-page-reasons li, .no-page-actions li {
+  margin-bottom: 0.5rem;
+}
+
+/* Button back to home */
+.back-home {
+  margin-top: 2rem;
+  padding: 30px 60px;
+  font-size: 50px;
+  background-color: var(--clr-textGrey);
+  color: var(--clr-textBg);
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.back-home:hover {
+  
+  background-color: var(--clr-text);
+  color: var(--clr-textBg);
+}
+
+/* Animation for the title */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* NO PAGE FOUND */
 body {
   font-family: "Grandstander";
 }
@@ -18,7 +95,9 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-
+.clickable{
+  cursor: pointer;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -346,7 +425,7 @@ header {
 }
 .footer{
   background-color: var(--clr-textBg);
-  height: 280px;
+  /* height: 280px; */
   .footer__content{
     padding: 50px 0;
     display: flex;

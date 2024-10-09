@@ -7,7 +7,7 @@ const Footer = () => {
                 <a className="logo" href="#!">
                     <img src="logo.svg" alt="logo" /> NEO Cleaning
                 </a>
-                <table>
+                <table cellSpacing={10}>
                     <tr className='th'>
                         <th>About Us</th>
                         <th>Company</th>
