@@ -11,7 +11,6 @@
 }
 
 /* NO PAGE FOUND */
-/* Styling the container */
 .no-page-container {
   display: flex;
   flex-direction: column;
@@ -25,7 +24,6 @@
   padding: 20px;
 }
 
-/* Big 404 title */
 .no-page-title {
   font-size: 8rem;
   font-weight: bold;
@@ -34,13 +32,10 @@
   animation: pulse 1.5s infinite;
 }
 
-/* Error message */
 .no-page-message {
   font-size: 1.5rem;
   margin: 1rem 0;
 }
-
-/* Styled UL list for reasons and actions */
 .no-page-reasons, .no-page-actions {
   text-align: left;
   list-style-type: square;
@@ -49,12 +44,10 @@
   font-size: 1.2rem;
 }
 
-/* List item styling */
 .no-page-reasons li, .no-page-actions li {
   margin-bottom: 0.5rem;
 }
 
-/* Button back to home */
 .back-home {
   margin-top: 2rem;
   padding: 30px 60px;
@@ -73,7 +66,6 @@
   color: var(--clr-textBg);
 }
 
-/* Animation for the title */
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -87,6 +79,7 @@
 }
 
 /* NO PAGE FOUND */
+
 body {
   font-family: "Grandstander";
 }
