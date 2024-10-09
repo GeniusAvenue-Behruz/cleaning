@@ -1,8 +1,14 @@
 import React from 'react'
-
+import Nav from '../components/Nav.js'
+import Footer from '../components/Footer.js'
 const About = () => {
   return (
-    <div>About</div>
+    <div className=''>
+      <div className='container'>
+        <Nav />
+      </div>
+      <Footer />
+    </div>
   )
 }
 

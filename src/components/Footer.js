@@ -5,7 +5,7 @@ const Footer = () => {
         <div className='footer'>
             <div className='footer__content container'>
                 <a className="logo" href="#!">
-                    <img src="logo.svg" alt="logo" /> NEO Cleaning
+                    <img src="logo.svg" alt="logo" /> IceBlue Garment Care
                 </a>
                 <table cellSpacing={10}>
                     <tr className='th'>

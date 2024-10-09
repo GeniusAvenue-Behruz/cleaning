@@ -3,8 +3,8 @@ import React from 'react'
 const Nav = () => {
   return (
     <nav className="nav">
-                <a className="logo" href="#!">
-                    <img src="logo.svg" alt="logo" /> NEO Cleaning
+                <a className="logo" href="/home">
+                    <img src="logo.svg" alt="logo" /> IceBlue Garment care
                 </a>
                 <ul className="nav-links">
                     <li><a href="/home">Home</a></li>
