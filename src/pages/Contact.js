@@ -22,13 +22,11 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const message = `
-            Name: ${formData.name}
-            Email: ${formData.email}
-            Phone: ${formData.phone}
-            Message: ${formData.message}
-            Newsletter Subscription: ${formData.newsletter ? 'Yes' : 'No'}
-        `;
+        const message = `Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Message: ${formData.message}
+Newsletter Subscription: ${formData.newsletter ? 'Yes' : 'No'}`;
 
         const telegramURL = `https://api.telegram.org/bot7369038811:AAEME4DpJjryAkuC1xxI2KOrGFpICScufek/sendMessage`;
 
@@ -109,7 +107,7 @@ const Contact = () => {
                                 <p><span role="img" aria-label="email">✉️</span> upcoder0@gmail.com</p>
                             </div>
                             <div className="social-icons">
-                                <a href="#!"><i className="fab fa-instagram"></i></a>
+                                <a href="https://instagram.com/icebluelaundry"><i className="fab fa-instagram"></i></a>
                                 <a href="#!"><i className="fab fa-twitter"></i></a>
                                 <a href="#!"><i className="fab fa-facebook-f"></i></a>
                                 <a href="#!"><i className="fab fa-youtube"></i></a>
