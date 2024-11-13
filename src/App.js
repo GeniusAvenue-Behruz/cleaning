@@ -4,6 +4,7 @@ import Home from './pages/Home.js'
 import About from './pages/About.js'
 import Contact from './pages/Contact.js'
 import NoPage from './pages/NoPage.js'
+import Dashboard from './pages/Dashboard.js'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path='/home' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/admin' element = {<Dashboard/>} />
         <Route path='*' element={<NoPage/>}/>
       </Routes>
     </BrowserRouter>

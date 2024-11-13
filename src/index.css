@@ -36,7 +36,9 @@
   font-size: 1.5rem;
   margin: 1rem 0;
 }
-.no-page-reasons, .no-page-actions {
+
+.no-page-reasons,
+.no-page-actions {
   text-align: left;
   list-style-type: square;
   margin: 10px 0;
@@ -44,7 +46,8 @@
   font-size: 1.2rem;
 }
 
-.no-page-reasons li, .no-page-actions li {
+.no-page-reasons li,
+.no-page-actions li {
   margin-bottom: 0.5rem;
 }
 
@@ -61,7 +64,7 @@
 }
 
 .back-home:hover {
-  
+
   background-color: var(--clr-text);
   color: var(--clr-textBg);
 }
@@ -70,13 +73,16 @@
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
 }
+
 /* END of NO PAGE FOUND */
 
 /* Start of Contact */
@@ -193,9 +199,11 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-.clickable{
+
+.clickable {
   cursor: pointer;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -204,6 +212,7 @@ a {
 ul {
   list-style: none;
 }
+
 .logo {
   display: flex;
   justify-content: center;
@@ -211,13 +220,15 @@ ul {
   color: var(--clr-text);
   font-size: 35px;
 }
+
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 105px;
+
   .nav-links {
-    display: flex;
+    display: flex !important;
     justify-content: center;
     gap: 42px;
 
@@ -233,6 +244,7 @@ nav {
 }
 
 header {
+
   /* overflow-x: hidden; */
   .hero {
     display: flex;
@@ -317,7 +329,7 @@ header {
 
       .hero-image {
         position: absolute;
-        
+
         /* top: 0; */
         left: 0;
       }
@@ -367,7 +379,12 @@ header {
   margin: 0 auto;
   margin-bottom: 80px;
 }
-
+.grid-item__step{
+  &:hover{
+    scale: 1.2;
+    transition: scale 0.3s ease;
+  }
+}
 /* Package Card */
 .package-card {
   cursor: pointer;
@@ -487,7 +504,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
   }
 
   .contact__text {
@@ -520,33 +537,212 @@ header {
     }
   }
 }
-.footer{
+
+.footer {
   background-color: var(--clr-textBg);
+
   /* height: 280px; */
-  .footer__content{
+  .footer__content {
     padding: 50px 0;
     display: flex;
-  align-items: start;
-  justify-content: space-between;
-  table{
-    th{
-      font-size: 18px;
-      font-family: inter;
-      font-weight: bold;
-      color: var(--clr-textGrey);
-      padding-bottom: 26px;
+    align-items: start;
+    justify-content: space-between;
+
+    table {
+      th {
+        font-size: 18px;
+        font-family: inter;
+        font-weight: bold;
+        color: var(--clr-textGrey);
+        padding-bottom: 26px;
+      }
+
+      td {
+        font-size: 16px;
+        font-family: inter;
+        color: var(--clr-textGrey);
+        padding-bottom: 15px;
+      }
     }
-    td{
-      font-size: 16px;
-      font-family: inter;
-      color: var(--clr-textGrey);
-      padding-bottom: 15px;
-    }
-  }
   }
 }
-.social-media{
+
+.social-media {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
+
+
+.admin-panel {
+  background-color: #ffffff; /* White background for the panel */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 2rem; /* Padding inside the panel */
+  max-width: 800px; /* Max width for the panel */
+  margin: auto; /* Center the panel */
+
+/* Header Styles */
+h1 {
+  color: #007bff; /* Primary color for header */
+  font-size: 2.5rem; /* Larger font size */
+  text-align: center; /* Center the header */
+}
+
+/* Form Container Styles */
+.form-container {
+  background-color: #e9ecef; /* Light gray background for the form */
+  border-radius: 8px; /* Rounded corners */
+  padding: 2rem; /* Padding for the form container */
+  margin-top: 20px; /* Space above the form */
+}
+
+/* Input and Button Styles */
+input[type="text"],
+input[type="number"] {
+  border: 1px solid #ced4da; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Padding inside inputs */
+  width: 100%; /* Full width */
+  transition: border-color 0.3s; /* Transition for border color */
+  margin-bottom: 1rem; /* Space between inputs */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+button {
+  background-color: #007bff; /* Primary button color */
+  border: none; /* No border */
+  color: #ffffff; /* White text */
+  border-radius: 5px; /* Rounded corners for buttons */
+  padding: 10px 20px; /* Padding inside buttons */
+  transition: background-color 0.3s; /* Transition for background color */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Radio Button Styles */
+.form-check {
+  display: flex; /* Use flexbox for better alignment */
+  align-items: center; /* Center align items */
+  margin-bottom: 1rem; /* Space between radio buttons */
+}
+
+.form-check input[type="radio"] {
+  margin-right: 10px; /* Space between radio and label */
+}
+
+/* Table Styles */
+.table {
+  background-color: #ffffff; /* White background for tables */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Clip borders */
+}
+
+.table th,
+.table td {
+  padding: 15px; /* Padding for table cells */
+  vertical-align: middle; /* Center align content */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f8f9fa; /* Light gray for odd rows */
+}
+
+/* QR Code Styles */
+.qr-code {
+  margin-top: 20px; /* Space above QR code */
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center QR code */
+}
+
+/* Misc Styles */
+.mb-3 {
+  margin-bottom: 1rem; /* Bottom margin for spacing */
+}
+
+.mt-3 {
+  margin-top: 1rem; /* Top margin for spacing */
+}
+
+.mt-4 {
+  margin-top: 2rem; /* More spacing for sections */
+}
+
+h4 {
+  color: #333; /* Darker color for section headings */
+}
+
+ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+}
+}
+/* General Styles for Print */
+@media print {
+  body {
+    background-color: white; /* Ensure background is white for printing */
+    color: black; /* Black text for better contrast */
+    font-size: 10px; /* Standard font size for readability */
+  }
+
+  .admin-panel {
+    box-shadow: none; /* Remove shadow in print */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+  }
+
+  h1 {
+    font-size: 14px; /* Larger font size for the header */
+    text-align: center; /* Center the header */
+  }
+
+  /* Form Container Styles */
+  .form-container {
+    padding: 0; /* Remove padding */
+    margin-top: 0; /* Remove margin */
+    border: 1px solid #000; /* Solid border to simulate a cheque */
+  }
+
+  /* Input and Button Styles */
+  input[type="text"],
+  input[type="number"],
+  button {
+    display: none; /* Hide inputs and buttons in print */
+  }
+
+  /* Show only relevant content */
+  .print-content {
+    display: block; /* Ensure print content is visible */
+  }
+
+  /* Table Styles */
+  .table {
+    border-collapse: collapse; /* Collapse borders for the table */
+    width: 100%; /* Full width for printing */
+  }
+
+  .table th,
+  .table td {
+    border: 1px solid #000; /* Solid black border for table cells */
+    padding: 10px; /* Padding for table cells */
+  }
+
+  .table th {
+    background-color: #f0f0f0; /* Light gray background for header */
+  }
+
+  /* Hide unnecessary elements */
+  .no-print {
+    display: none; /* Hide elements not needed for print */
+  }
+}
+
+/* End of Payment section */
