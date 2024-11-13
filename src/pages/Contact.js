@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import NavBar from '../components/Nav.js'
-import Footer from '../components/Footer.js'
+import NavBar from '../components/Nav.js';
+import Footer from '../components/Footer.js';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -18,17 +18,40 @@ const Contact = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData);
-        // Handle form submission here
+
+        const message = `
+            Name: ${formData.name}
+            Email: ${formData.email}
+            Message: ${formData.message}
+            Newsletter Subscription: ${formData.newsletter ? 'Yes' : 'No'}
+        `;
+
+        const telegramURL = `https://api.telegram.org/bot7369038811:AAEME4DpJjryAkuC1xxI2KOrGFpICScufek/sendMessage`;
+
+        try {
+            await fetch(telegramURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: 1314633804,
+                    text: message,
+                }),
+            });
+            alert("Form submitted and sent to Telegram!");
+        } catch (error) {
+            console.error("Error sending message to Telegram:", error);
+        }
     };
 
     return (
         <div className="">
             <div className="container">
                 <NavBar />
-                <div className='contact-container'>
+                <div className="contact-container">
                     <div className="contact-left">
                         <h2>Contact <span>us</span></h2>
                         <form onSubmit={handleSubmit}>
@@ -66,7 +89,7 @@ const Contact = () => {
                     </div>
                     <div className="contact-right">
                         <p>
-                            If you have any more questions, or is you feel to speak someone, we are always happy to see you in our company...
+                            If you have any more questions, or if you feel like speaking to someone, we are always happy to see you in our company...
                         </p>
                         <div className="contact-info">
                             <img src="imgs/map-placeholder.svg" alt="Map" />
@@ -77,7 +100,6 @@ const Contact = () => {
                                 <p><span role="img" aria-label="email">✉️</span> contact@iceblue.uz</p>
                             </div>
                             <div className="social-icons">
-                                {/* Replace '#' with actual links */}
                                 <a href="#!"><i className="fab fa-instagram"></i></a>
                                 <a href="#!"><i className="fab fa-twitter"></i></a>
                                 <a href="#!"><i className="fab fa-facebook-f"></i></a>
@@ -85,10 +107,9 @@ const Contact = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 };
