@@ -6,6 +6,7 @@ const Contact = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
+        phone: '',
         message: '',
         newsletter: false,
     });
@@ -22,11 +23,12 @@ const Contact = () => {
         e.preventDefault();
 
         const message = `
-            Name: ${formData.name}
-            Email: ${formData.email}
-            Message: ${formData.message}
-            Newsletter Subscription: ${formData.newsletter ? 'Yes' : 'No'}
-        `;
+            Name: ${formData.name}
+            Email: ${formData.email}
+            Phone: ${formData.phone}
+            Message: ${formData.message}
+            Newsletter Subscription: ${formData.newsletter ? 'Yes' : 'No'}
+        `;
 
         const telegramURL = `https://api.telegram.org/bot7369038811:AAEME4DpJjryAkuC1xxI2KOrGFpICScufek/sendMessage`;
 
@@ -69,6 +71,13 @@ const Contact = () => {
                                 value={formData.email}
                                 onChange={handleChange}
                             />
+                            <input
+                                type="tel"
+                                name="phone"
+                                placeholder="Phone"
+                                value={formData.phone}
+                                onChange={handleChange}
+                            />
                             <textarea
                                 name="message"
                                 placeholder="Message"
@@ -94,10 +103,10 @@ const Contact = () => {
                         <div className="contact-info">
                             <img src="imgs/map-placeholder.svg" alt="Map" />
                             <div className="contact-details">
-                                <p><strong>IceBlue</strong><br />315 W 36th St.<br />NY 10018</p>
-                                <p><span role="img" aria-label="location">📍</span> NYC, United States</p>
+                                <p><strong>IceBlue</strong><br />Laundry<br /> Service</p>
+                                <p><span role="img" aria-label="location">📍</span> Tashkent, Uzbekistan</p>
                                 <p><span role="img" aria-label="phone">📞</span> +998 93 604 94 73</p>
-                                <p><span role="img" aria-label="email">✉️</span> contact@iceblue.uz</p>
+                                <p><span role="img" aria-label="email">✉️</span> upcoder0@gmail.com</p>
                             </div>
                             <div className="social-icons">
                                 <a href="#!"><i className="fab fa-instagram"></i></a>
